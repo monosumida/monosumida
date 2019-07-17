@@ -1,4 +1,3 @@
-![monosumida-log](https://github.com/monosumida/monosumida/blob/images/images/monosumida-logo.png)
 # monosumidaメンバー専用アプリケーション
 開発を進めていく上で必要な機能や便利なツールをこのアプリケーション内に追加していく.
 
