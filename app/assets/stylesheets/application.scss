@@ -49,6 +49,12 @@ $main-pink: #FAE3EB;
   background-color: #FAE3EB;
 }
 
+@media (min-width: 1200px) {
+  .container {
+      max-width: 1440px;
+  }
+}
+
 .scroll {
   font-family: 'Montserrat', sans-serif;
   font-size: 24px;
@@ -64,8 +70,9 @@ $main-pink: #FAE3EB;
   display: inline-block;
   text-decoration: none;
   transition: .3s;
-  &:hover {
+  &:hover, &:visited {
     color: $white;
+    background-color: rgba(0, 0, 0, 0);
     text-decoration: none;
     opacity: .6;
   }
@@ -97,10 +104,8 @@ $main-pink: #FAE3EB;
 }
 .scroll.gray {
   color: $gray;
-  &:hover {
+  &:hover, &:visited {
     color: $gray;
-    text-decoration: none;
-    opacity: .6;
   }
   & span {
     border: 3px solid $gray;
