@@ -55,6 +55,9 @@ $main-pink: #FAE3EB;
   }
 }
 
+/*****************************************
+ * scroll
+ *****************************************/
 .scroll {
   font-family: 'Montserrat', sans-serif;
   font-size: 24px;
@@ -115,6 +118,9 @@ $main-pink: #FAE3EB;
   }
 }
 
+/*****************************************
+ * article
+ *****************************************/
 article {
   position: relative;
   & .container {
@@ -147,6 +153,9 @@ article {
   }
 }
 
+/*****************************************
+ * link-arrow
+ *****************************************/
 .link-arrow {
   display: inline-block;
   width: 10px;
@@ -161,4 +170,72 @@ article {
   font-size: 24px;
   font-family: 'Permanent Marker', cursive;
   margin-left: 15px;
+}
+
+/*****************************************
+ * global-nav
+ *****************************************/
+nav.global-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100vw;
+  height: 70px;
+  & a.brand {
+    float: left;
+    color: $black;
+    display: inline-block;
+    padding: 10px 0 10px;
+    &:hover {
+      text-decoration: none;
+      opacity: .6;
+    }
+    & h1.global-nav-logo {
+      font-family: 'kollek-bolditalic', sans-serif;
+      font-size: 18px;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  & ul {
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    & li {
+      float: left;
+      height: 70px;
+      margin-left: 30px;
+      padding: 7px 0;
+      & a {
+        font-family: 'kollek-italic', sans-serif;
+        font-size: 16px;
+        color: $black;
+        position: relative;
+        top: 15px;
+        padding: 0 30px;
+        &::before, &.current::before {
+          background-color: $black;
+          content: '';
+          display: block;
+          position: absolute;
+          z-index: 99;
+          transition: all .3s ease;
+          -webkit-transition: all .3s ease;
+          left: 0;
+          bottom: -15px;
+          width: 0px;
+          height: 3px;
+        }
+        &:hover {
+          text-decoration: none;
+        }
+        &:hover::before, &.current::before {
+          width: 100%;
+          width: calc(100% + 3px);
+        }
+      }
+    }
+  }
 }
