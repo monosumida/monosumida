@@ -4,6 +4,9 @@
  */
 @import "bootstrap";
 @import "rouge";
+/*****************************************
+ * kollek
+ *****************************************/
 @font-face {
   font-family: 'kollek';
   src: font-url('Kollektif.ttf') format('truetype');
@@ -25,6 +28,34 @@
 @font-face {
   font-family: 'kollek-bolditalic';
   src: font-url('Kollektif-BoldItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*****************************************
+ * hack
+ *****************************************/
+@font-face {
+  font-family: 'hack';
+  src: font-url('Hack-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'hack-bold';
+  src: font-url('Hack-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'hack-italic';
+  src: font-url('Hack-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'hack-bolditalic';
+  src: font-url('Hack-BoldItalic.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -51,14 +82,18 @@ $main-pink: #FAE3EB;
 }
 
 body {
+  font-size: 14px;
+  letter-spacing: 1.0px;
+  line-height: 1.9rem;
   position: relative;
 }
 
 main {
-  margin-top: 70px;
+  margin-top: 60px;
 }
 
-a:hover {
+a:hover, a:visited {
+  color: inherit;
   background-color: rgba(0, 0 ,0 ,0);
   text-decoration: none;
 }
@@ -72,15 +107,20 @@ a:hover {
   }
 }
 .alert {
-  position: absolute;
-  top: 55px;
+  position: fixed;
+  bottom: 0;
   left: 0;
+  margin: 0;
   z-index: 99;
   width: 100%;
   height: 55px;
   opacity: .8;
 }
 
+.btn, .btn:hover, .btn:visited {
+  color: $white;
+  text-decoration: none;
+}
 /*****************************************
  * scroll
  *****************************************/
@@ -207,7 +247,7 @@ nav.global-nav {
   left: 0;
   z-index: 99;
   width: 100vw;
-  height: 70px;
+  height: 60px;
   & a.brand {
     float: left;
     color: $black;
@@ -231,7 +271,7 @@ nav.global-nav {
     padding: 0;
     & li {
       float: left;
-      height: 70px;
+      height: 60px;
       margin-left: 30px;
       padding: 7px 0;
       & a {

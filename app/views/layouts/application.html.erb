@@ -9,12 +9,12 @@
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Permanent+Marker&display=swap" rel="stylesheet">
 
+    <script src="https://kit.fontawesome.com/757212c879.js"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <% console %>
     <%= render 'parts/nav' %>
     <% if notice %><%= render 'parts/notice', notice: notice %><% end %>
     <% if alert %><%= render 'parts/alert', alert: alert %><% end %>

@@ -1,5 +1,21 @@
 <main class="blogs-wrapper">
   <div class="container">
-    <%= link_to 'ブログを作成', new_blog_path, class: 'btn btn-primary' %>
+    <% if logged_in? %>
+      <%= link_to 'ブログを作成', new_blog_path, class: 'btn btn-primary' %>
+    <% end %>
+    <div class="blog-cards-wrapper">
+      <% 10.times do%>
+        <div class="blog-card-wrapper">
+          <div class="blog-card">
+            <div class="blog-thumbnail">
+              dummy
+            </div>
+            <div class="blog-info-wrapper">
+              <h1>TitleTitleTitleTitleTitleTitleTitleTitleTitleTitleTitleTitleTitleTitle</h1>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
 </main>

@@ -1,3 +1,112 @@
-// Place all the styles related to the blogs controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$black: #1F262A;
+$light-gray: #5B676D;
+$dark-gray: #2A3439;
+$gray: #ECF0F1;
+$white: #FFFFFF;
+$main-blue: #184AFB;
+$main-pink: #FAE3EB;
+
+.blogs-wrapper {
+  .blog-cards-wrapper {
+    margin-top: 120px;
+    .blog-card-wrapper {
+      width: 100%;
+      content: '';
+      display: block;
+      clear: both;
+      .blog-card {
+        height: 180px;
+        margin-bottom: 30px;
+        .blog-thumbnail {
+          float: left;
+          width: 320px;
+          height: 180px;
+          text-align: center;
+          line-height: 180px;
+          background-color: #EEEEEE;
+          border-radius: 30px 0 0 30px;
+        }
+        .blog-info-wrapper {
+          float: left;
+          width: calc(100% - 320px);
+          height: 180px;
+          border: 1px solid #EEEEEE;
+          border-radius: 0 30px 30px 0;
+          & h1 {
+            font-size: 1.8rem;
+            margin: 15px 30px;
+            word-wrap: break-word;
+          }
+        }
+      }
+    }
+  }
+}
+
+.blog-wrapper {
+  .blog-edit-link {
+    color: #AAAAAA;
+    & .blog-edit-link-text {
+      font-size: 14px;
+      margin-right: 10px;
+    }
+    &:hover {
+      color: $black;
+      text-decoration: underline;
+    }
+  }
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+    -webkit-font-feature-settings: "palt";
+    font-feature-settings: "palt";
+    line-height: 1.4;
+  }
+}
+
+.blog-new-wrapper,
+.blog-edit-wrapper {
+  background-color: $gray;
+  & form {
+    position: relative;
+    width: 100vw;
+    height: calc(100vh - 60px);
+    & .form-control {
+      font-family: 'hack';
+      &.blog-title {
+        font-size: 28px;
+        height: 50px;
+      }
+      &.blog-content {
+        font-size: 16px;
+        height: calc(100vh - 200px);
+      }
+    }
+    & .blog-text-field-wrapper {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 60px;
+    }
+    & .blog-text-area-wrapper {
+      position: absolute;
+      top: 70px;
+      left: 0;
+      right: 0;
+    }
+    & .blog-footer-wrapper {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100vw;
+      height: 55px;
+      & .btn {
+        float: right;
+        margin-right: 30px;
+      }
+    }
+  }
+}
