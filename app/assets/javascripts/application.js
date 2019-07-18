@@ -5,7 +5,7 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require_tree .
-$(function(){
+document.addEventListener('turbolinks:load', function() {
   // 画像の高さを毎回計算
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
