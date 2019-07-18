@@ -49,10 +49,35 @@ $main-pink: #FAE3EB;
   background-color: #FAE3EB;
 }
 
+body {
+  position: relative;
+}
+
+main {
+  margin-top: 70px;
+}
+
+a:hover {
+  background-color: rgba(0, 0 ,0 ,0);
+  text-decoration: none;
+}
+
+/*****************************************
+ * override bootstrap
+ *****************************************/
 @media (min-width: 1200px) {
   .container {
       max-width: 1440px;
   }
+}
+.alert {
+  position: absolute;
+  top: 55px;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 55px;
+  opacity: .8;
 }
 
 /*****************************************

@@ -1,13 +1,8 @@
 <%= form_tag admin_sessions_path, :method => :post do %>
-  <div class="field">
-    <%= label_tag :email %><br />
-    <%= text_field_tag :email %>
-  </div>
-  <div class="field">
-    <%= label_tag :password %><br />
-    <%= password_field_tag :password %>
-  </div>
-  <div class="actions">
-    <%= submit_tag "Login" %>
-  </div>
+  <%= label_tag :email, {}, class: 'sr-only' %>
+  <%= email_field_tag :email, '', class: 'form-control', placeholder: 'sample@monosumida.com', required: true, autofocus: true %>
+  <%= label_tag :password, {}, class: 'sr-only' %>
+  <%= password_field_tag :password, '', class: 'form-control', placeholder: 'password', required: true, autofocus: true %>
+  <%= submit_tag "Login", class: 'btn btn-lg btn-primary btn-block' %>
+  <p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
 <% end %>

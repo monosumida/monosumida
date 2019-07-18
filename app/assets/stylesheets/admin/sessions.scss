@@ -1,3 +1,49 @@
-// Place all the styles related to the admin/sessions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$black: #1F262A;
+$light-gray: #5B676D;
+$dark-gray: #2A3439;
+$gray: #ECF0F1;
+$white: #FFFFFF;
+$main-blue: #184AFB;
+$main-pink: #FAE3EB;
+
+.login-body {
+  height: 100vh;
+  position: relative;
+  background-color: $gray;
+  & .login-form-wrapper {
+    width: 100%;
+    max-width: 330px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateY(-30%) translateX(-50%);
+    -webkit-transform: translateY(-30%) translateX(-50%);
+    & .login-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 24px;
+    }
+    & .login-top-logo {
+      font-family: 'kollek-bolditalic', sans-serif;
+      font-size: 46px;
+    }
+    & form {
+      & .form-control {
+        position: relative;
+        box-sizing: border-box;
+        height: auto;
+        padding: 10px;
+        font-size: 16px;
+      }
+      & input[type="email"] {
+        margin-bottom: -1px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+      & input[type="password"] {
+        margin-bottom: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+    }
+  }
+}
