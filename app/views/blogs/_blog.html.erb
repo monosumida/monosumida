@@ -6,6 +6,12 @@
       </div>
       <div class="blog-info-wrapper">
         <h1><%= blog.title %></h1>
+        <p class="blog-publish-at"><i class="far fa-clock"></i><%= blog.created_at.strftime('%y/%m/%d %H:%M') %></p>
+        <div class="blog-author clearfix">
+          <div class="blog-author-icon">
+          </div>
+          <p class="blog-author-name">Author</p>
+        </div>
       </div>
     </div>
   </div>
