@@ -24,6 +24,7 @@ $main-pink: #FAE3EB;
         clear: both;
         color: $black;
         .blog-card {
+          position: relative;
           height: 180px;
           margin-bottom: 30px;
           border-radius: 15px;
@@ -43,6 +44,7 @@ $main-pink: #FAE3EB;
             border-radius: 15px 0 0 15px;
           }
           .blog-info-wrapper {
+            position: relative;
             float: left;
             width: calc(100% - 320px);
             height: 180px;
@@ -53,6 +55,34 @@ $main-pink: #FAE3EB;
               font-size: 1.8rem;
               margin: 15px 30px;
               word-wrap: break-word;
+            }
+            & p.blog-publish-at {
+              position: absolute;
+              left: 30px;
+              bottom: 15px;
+              margin: 0;
+              padding: 0;
+              & i {
+                margin-right: 5px;
+              }
+            }
+            & .blog-author {
+              position: absolute;
+              right: 30px;
+              bottom: 15px;
+              & .blog-author-icon {
+                float: left;
+                margin-right: 5px;
+                width: 30px;
+                height: 30px;
+                border-radius: 100%;
+                background-color: #EEEEEE;
+              }
+              & .blog-author-name {
+                float: left;
+                margin-bottom: 0;
+                line-height: 30px;
+              }
             }
           }
         }
@@ -85,6 +115,7 @@ $main-pink: #FAE3EB;
           border-radius: 15px 15px 0 0;
         }
         .blog-info-wrapper {
+          position: relative;
           margin: 0;
           padding: 8px 10px;
           width: 100%;
@@ -96,11 +127,36 @@ $main-pink: #FAE3EB;
             font-size: 1.2rem;
             word-wrap: break-word;
           }
+          & .blog-publish-at {
+            position: absolute;
+            left: 12px;
+            bottom: 12px;
+            margin-bottom: 0;
+          }
+          & .blog-author {
+            position: absolute;
+            right: 8px;
+            bottom: 8px;
+            .blog-author-icon {
+              float: left;
+              margin-right: 8px;
+              width: 30px;
+              height: 30px;
+              border-radius: 100%;
+              background-color: #EEEEEE;
+            }
+            .blog-author-name {
+              float: left;
+              margin-bottom: 0;
+              line-height: 30px;
+            }
+          }
         }
       }
     }
   }
 }
+
 .blog-wrapper {
   .blog-edit-link {
     color: #AAAAAA;
