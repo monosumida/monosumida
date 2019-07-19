@@ -22,9 +22,17 @@ $main-pink: #FAE3EB;
         content: '';
         display: block;
         clear: both;
+        color: $black;
         .blog-card {
           height: 180px;
           margin-bottom: 30px;
+          border-radius: 15px;
+          transition: .1s;
+          transition: transform .1s linear;
+          &:hover {
+            transform: scale(1.002);
+            box-shadow: 0 0 20px -8px rgba(0,0,0,0.4);
+          }
           .blog-thumbnail {
             float: left;
             width: 320px;
@@ -62,6 +70,7 @@ $main-pink: #FAE3EB;
     }
     .blog-cards-wrapper {
       .blog-card {
+        color: $black;
         margin: 24px 0 24px;
         .blog-thumbnail {
           margin: 0;
@@ -79,7 +88,7 @@ $main-pink: #FAE3EB;
           margin: 0;
           padding: 8px 10px;
           width: 100%;
-          min-height: 180px;
+          min-height: 120px;
           border: 1px solid #EEE;
           border-radius: 0 0 15px 15px;
           h1 {
