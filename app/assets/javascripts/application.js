@@ -24,4 +24,10 @@ document.addEventListener('turbolinks:load', function() {
       e.returnValue = "このページを離れますか？";
     }
   }
+
+  // ハンバーガーメニューの表示
+  $('#hamburger').on('click', function() {
+    $(this).toggleClass('close');
+    $('.global-nav').toggleClass('visible');
+  });
 });
