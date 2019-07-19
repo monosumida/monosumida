@@ -3,6 +3,9 @@
     <% if logged_in? %>
       <%= link_to 'ブログを作成', new_blog_path, class: 'btn btn-primary' %>
     <% end %>
+    <div class="blogs-wrapper-heading">
+      Monosumida Developer's blog
+    </div>
     <div class="blog-cards-wrapper">
       <% 10.times do%>
         <div class="blog-card-wrapper">
