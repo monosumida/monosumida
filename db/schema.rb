@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2019_07_20_023456) do
 
-  create_table "blogs", force: :cascade do |t|
+  create_table "blogs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -20,13 +20,13 @@ ActiveRecord::Schema.define(version: 2019_07_20_023456) do
     t.integer "user_id"
   end
 
-  create_table "topics", force: :cascade do |t|
+  create_table "topics", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", null: false
     t.string "crypted_password"
     t.string "salt"
