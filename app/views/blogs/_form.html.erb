@@ -1,22 +1,19 @@
 <%= form_with(model: blog, local: true, id: 'blog_form', class: 'clearfix') do |form| %>
-  <% if blog.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
-
-      <ul>
-      <% blog.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
   <div class="blog-text-field-wrapper mx-2">
     <%= form.text_field :title, class: 'form-control blog-title', placeholder: 'タイトル', required: true %>
   </div>
 
   <div class="blog-text-area-wrapper mx-2">
-    <%= form.text_area :content, class: 'form-control blog-content', placeholder: '記事を共有しよう', required: true %>
+    <div class="clearfix">
+      <%= link_to 'Write', '', id: 'blog-content-btn', class: 'current', remote: true %>
+      <%= link_to 'Preview', '', id: 'blog-preview-btn', remote: true %>
+    </div>
+    <div id="blog-content-area">
+      <%= form.text_area :content, class: 'form-control', placeholder: '記事を共有しよう', required: true %>
+    </div>
+    <div id="blog_preview">
+      <%= render 'preview' %>
+    </div>
   </div>
 
   <div class="blog-footer-wrapper">

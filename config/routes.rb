@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   resources :topics
   resources :blogs do
-    member do
-      post 'preview'
+    collection do
+      get 'preview', as: :preview
     end
   end
   namespace :admin do
