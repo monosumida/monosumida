@@ -1,5 +1,7 @@
-<%= Rouge::Themes::Monokai.render(:scope => '.highlight') %>
+<%= Rouge::Themes::MonokaiSublime.render(:scope => '.highlight') %>
 .blog-conetent-wrapper {
+  font-size: 16px;
+  line-height: 1.5;
   h1 {
     font-size: 1.8rem;
     border-bottom: 1px solid #EEEEEE;
@@ -27,8 +29,9 @@
   h3 code,
   h4 code,
   h5 code,
-  h6 code {
-    font-size: 1rem;
+  h6 code,
+  ul > li code {
+    font-size: .7rem;
     font-family: 'hack';
     padding: .1rem .4rem;
     color: #4A4A4A;
