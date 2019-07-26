@@ -1,4 +1,8 @@
-class Admin::SessionsController < ApplicationController
+class Admin::SessionsController < Admin::ApplicationController
+  skip_before_action :admin_user?
+
+  layout 'layouts/application'
+
   def new
     @user = User.new
   end

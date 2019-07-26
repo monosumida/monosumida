@@ -27,6 +27,7 @@ function switch_editor() {
       }).done((data) => {
         console.log(data);
         $('#blog_preview').show();
+        $('#blog-preview-btn').css('opacity', '1');
       }).fail((data) => {
         console.log(data);
       })
