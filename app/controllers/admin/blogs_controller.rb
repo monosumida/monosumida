@@ -1,9 +1,9 @@
-class BlogsController < ApplicationController
+class Admin::BlogsController < Admin::ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
   protect_from_forgery except: [:preview]
 
   def index
-    @blogs = Blog.active
+    @blogs = Blog.all
   end
 
   def show

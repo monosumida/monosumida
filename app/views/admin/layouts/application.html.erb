@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Monosumida</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Permanent+Marker&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/757212c879.js"></script>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= render 'admin/parts/nav' %>
+    <% if notice %><%= render 'parts/notice', notice: notice %><% end %>
+    <% if alert %><%= render 'parts/alert', alert: alert %><% end %>
+    <%= yield %>
+  </body>
+</html>

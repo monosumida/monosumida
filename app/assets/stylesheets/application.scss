@@ -61,6 +61,7 @@
 }
 
 $black: #1F262A;
+$red: #A34747;
 $light-gray: #5B676D;
 $dark-gray: #2A3439;
 $gray: #ECF0F1;
@@ -324,25 +325,25 @@ article {
 @media (max-width: 979px) {
   #global-nav-logo-for-sp {
     position: fixed;
-    top: 20px;
+    top: 10px;
     left: 20px;
     font-family: 'kollek-bolditalic', sans-serif;
     z-index: 99;
     color: $black;
     h1 {
-      font-size: 20px;
+      font-size: 16px;
     }
   }
   #hamburger {
     height: 50px;
     width: 50px;
-    background: rgba(255, 255, 255, .8);
+    background: lighten($gray, 10%);
     position: fixed;
-    top: 20px;
+    top: 8px;
     right: 20px;
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: 0 0 4px rgba(0,0,0,0);
+    box-shadow: 0 0 4px rgba(0,0,0,0.1);
     transition: all .2s ease;
     z-index: 9999;
     &:hover {
@@ -415,15 +416,16 @@ article {
         width: 100%;
         transition: all .15s ease;
         a {
+          color: $black;
           display: block;
           padding: 20px;
           width: 100%;
           height: 100%;
         }
         &:hover {
-          background: $black;
           color: $gray;
           transition: all .15s ease;
+          transform: scale(1.1);
         }
       }
     }

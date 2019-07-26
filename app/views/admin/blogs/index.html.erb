@@ -1,0 +1,17 @@
+<main class="blogs-wrapper">
+  <div class="container">
+    <div class="blogs-wrapper-heading">
+      Monosumida Developer's blog
+    </div>
+    <div class="blog-cards-wrapper">
+      <% if logged_in? %>
+        <div class="mb-2 text-right">
+          <%= link_to new_blog_path, class: 'btn btn-dark mb-2' do %>
+            <i class="far fa-edit mr-2"></i>投稿する
+          <% end %>
+        </div>
+      <% end %>
+      <%= render @blogs %>
+    </div>
+  </div>
+</main>
