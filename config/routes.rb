@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :sessions
     resources :blogs
+    root 'blogs#index'
   end
   root 'home#top'
 end

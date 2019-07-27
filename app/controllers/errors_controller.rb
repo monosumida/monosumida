@@ -20,8 +20,6 @@ class ErrorsController < ActionController::Base
   end
 
   def render_errors
-    p "--------------------------------------------------"
-    p request.env["action_dispatch.exception"]
     raise request.env["action_dispatch.exception"]
   end
 end
