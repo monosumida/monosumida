@@ -21,7 +21,11 @@
       <%= render 'admin/parts/nav' %>
       <div class="main-panel">
         <div class="content">
-          <%= yield %>
+          <div class="container-fluid">
+            <div class="row">
+              <%= yield %>
+            </div>
+          </div>
         </div>
       </div>
     </div>
