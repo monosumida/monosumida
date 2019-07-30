@@ -27,3 +27,5 @@ test:
 production:
   <<: *default
   database: db/monosumida_production
+  adapter: postgresql
+  encoding: unicode
