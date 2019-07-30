@@ -7,6 +7,15 @@ module ApplicationHelper
     request.fullpath.split('/')[1] == pathname
   end
 
+  def current_admin_root?
+    current_path = request.fullpath.split('/')
+    current_path[1] == 'admin' && current_path[2].blank?
+  end
+
+  def current_here_from_admin?(pathname)
+    request.fullpath.split('/')[2] == pathname
+  end
+
   def markdown(text)
     render_options = {
       filter_html: false,

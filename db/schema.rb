@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_25_131040) do
+ActiveRecord::Schema.define(version: 2019_07_30_130637) do
 
   create_table "blogs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id"
     t.string "title"
+    t.text "content"
     t.boolean "public_flag"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.datetime "publish_at"
-    t.text "content"
+    t.index ["user_id"], name: "index_blogs_on_user_id"
   end
 
   create_table "roles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -44,10 +44,12 @@ ActiveRecord::Schema.define(version: 2019_07_25_131040) do
   create_table "users", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", null: false
+    t.text "description", null: false
     t.string "crypted_password"
     t.string "salt"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string "image"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

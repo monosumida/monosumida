@@ -1,22 +1,27 @@
-<%= form_with(model: blog, local: true, id: 'blog_form', class: 'clearfix') do |form| %>
-  <div class="blog-text-field-wrapper mx-2">
-    <%= form.text_field :title, class: 'form-control blog-title', placeholder: 'タイトル', required: true %>
-  </div>
+<%= form_with(model: [:admin, blog], local: true, id: 'blog_form', class: 'clearfix') do |form| %>
 
-  <div class="blog-text-area-wrapper mx-2">
-    <div class="clearfix">
-      <%= link_to 'Write', '', id: 'blog-content-btn', class: 'current', remote: true %>
-      <%= link_to 'Preview', '', id: 'blog-preview-btn', remote: true %>
-    </div>
-    <div id="blog-content-area">
-      <%= form.text_area :content, class: 'form-control', placeholder: '記事を共有しよう', required: true %>
-    </div>
-    <div id="blog_preview">
-      <%= render 'preview' %>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="custom-control custom-checkbox">
+        <%= form.check_box :public_flag, class: 'custom-control-input' %>
+        <%= form.label :public_flag, '公開', class: 'custom-control-label' %>
+      </div>
     </div>
   </div>
 
-  <div class="blog-footer-wrapper">
-    <%= form.submit class: 'btn btn-dark' %>
+  <div class="row">
+    <div class="col-md-12">
+      <h1><%= blog.title %></h1>
+    </div>
   </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="blog-conetent-wrapper">
+        <%= markdown(blog.content) %>
+      </div>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
+  <div class="clearfix"></div>
 <% end %>

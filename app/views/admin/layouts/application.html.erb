@@ -7,17 +7,27 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Permanent+MarkerRoboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons&display=swap" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/757212c879.js"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= render 'admin/parts/nav' %>
+  <body class="admin-body">
     <% if notice %><%= render 'parts/notice', notice: notice %><% end %>
     <% if alert %><%= render 'parts/alert', alert: alert %><% end %>
-    <%= yield %>
+    <div class="wrapper ">
+      <%= render 'admin/parts/nav' %>
+      <div class="main-panel">
+        <div class="content">
+          <div class="container-fluid">
+            <div class="row">
+              <%= yield %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

@@ -1,0 +1,12 @@
+<tr>
+  <td><%= user.id %></td>
+  <td><%= user.name %></td>
+  <td><%= user.email %></td>
+  <td>
+    <% user.roles.each do |role| %>
+      <%= "#{role.name} " %>
+    <% end %>
+  </td>
+  <td><%= link_to 'Edit', edit_admin_user_path(user), class: 'btn btn-info' %></td>
+  <td><%= link_to 'Destroy', admin_user_path(user), class: 'btn btn-danger', method: :delete, data: { confirm: '本当に削除しますか？' } %></td>
+</tr>

@@ -1,12 +1,14 @@
-<nav class="global-nav-admin clearfix">
-  <%= link_to root_path, class: 'brand', id: 'global-nav-logo-for-sp' do %><h1 class="global-nav-admin-logo">Mono<br>sumida</h1><% end %>
-  <div class="container">
-    <%= render 'admin/parts/nav_items' %>
+<div class="sidebar" data-color="purple" data-background-color="white">
+  <!--
+    Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+    Tip 2: you can also add an image using data-image tag
+  -->
+  <div class="logo">
+    <%= link_to admin_root_path, class: 'logo-monosumida' do %>Mono<br>sumida<% end %>
   </div>
-</nav>
-
-<div id="hamburger">
-  <span></span>
-  <span></span>
-  <span></span>
+  <div class="sidebar-wrapper">
+    <ul class="nav">
+      <%= render 'admin/parts/nav_items' %>
+    </ul>
+  </div>
 </div>
