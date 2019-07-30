@@ -20,10 +20,12 @@ $main-pink: #FAE3EB;
       margin-top: 60px;
       .blog-card-wrapper {
         width: 100%;
-        content: '';
-        display: block;
-        clear: both;
         color: $black;
+        &::after {
+          content: '';
+          display: block;
+          clear: both;
+        }
         .blog-card {
           position: relative;
           height: 180px;
@@ -84,16 +86,21 @@ $main-pink: #FAE3EB;
         }
       }
       & .blogs-refine-wrapper {
-        content: '';
-        display: block;
-        clear: both;
+        &::after {
+          content: '';
+          display: block;
+          clear: both;
+        }
         & .blogs-refine-link {
           color: $black;
           & .blogs-author {
             width: 100%;
-            content: '';
-            display: block;
-            clear: both;
+            margin-bottom: 30px;
+            &::after {
+              content: '';
+              display: block;
+              clear: both;
+            }
             & .blogs-author-no-image {
               float: left;
               width: 50px;
@@ -133,7 +140,7 @@ $main-pink: #FAE3EB;
     .blog-cards-wrapper {
       .blog-card {
         color: $black;
-        margin: 24px 0 24px;
+        margin: 10px 0;
         .blog-info-wrapper {
           position: relative;
           margin: 0;
@@ -141,7 +148,7 @@ $main-pink: #FAE3EB;
           width: 100%;
           min-height: 120px;
           border: 1px solid #EEE;
-          border-radius: 0 0 15px 15px;
+          border-radius: 15px;
           h1 {
             font-family: 'hack-bold';
             font-size: 1.2rem;
@@ -167,9 +174,10 @@ $main-pink: #FAE3EB;
               & .blog-author-icon-image {
                 width: 30px;
                 height: 30px;
+                border-radius: 50%;
               }
             }
-            .blog-author-name {
+            & .blog-author-name {
               float: left;
               margin-bottom: 0;
               line-height: 30px;

@@ -13,7 +13,7 @@
       <% end %>
       <div class="row">
         <div class="col-3">
-          <div class="blogs-refine-wrapper">
+          <div class="blogs-refine-wrapper d-md-block d-none">
             <% User.all.each do |user| %>
               <%= link_to blogs_path(author: user.name), class: "blogs-refine-link" do %>
                 <div class="blogs-author">
@@ -28,7 +28,7 @@
             <% end %>
           </div>
         </div>
-        <div class="col-9">
+        <div class="col-md-9 col-12">
           <%= render @blogs %>
         </div>
       </div>
