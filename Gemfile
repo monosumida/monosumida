@@ -42,6 +42,7 @@ gem 'sorcery', '~> 0.9.1'
 gem 'rouge'
 gem 'redcarpet'
 # Operate image
+gem 'rmagick', '2.13.4', :require => 'RMagick'
 gem 'carrierwave', '>= 2.0.0.rc', '< 3.0'
 
 # Reduces boot times through caching; required in config/boot.rb

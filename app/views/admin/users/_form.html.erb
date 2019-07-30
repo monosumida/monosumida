@@ -40,6 +40,16 @@
   <div class="clearfix col-md-12">
     <small class="float-right">※パスワードを変更する場合のみ入力してください</small>
   </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <%= form.label :image, 'Image', class: 'bmd-label-floating' %>
+        <%= form.file_field :image %>
+      </div>
+    </div>
+  </div>
+
   <%= form.submit 'UPDATE', class: 'btn btn-primary pull-right' %>
   <div class="clearfix"></div>
 <% end %>

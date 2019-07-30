@@ -38,6 +38,6 @@ class Admin::UsersController < Admin::ApplicationController
     end
 
     def user_param_items
-      %i[name email description password password_confirmation]
+      %i[name email description image password password_confirmation]
     end
 end

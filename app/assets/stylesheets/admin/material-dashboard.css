@@ -12916,18 +12916,6 @@ select.form-control {
   top: -10px;
 }
 
-.form-group input[type=file] {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
 .form-newsletter .input-group,
 .form-newsletter .form-group {
   float: left;
@@ -17305,6 +17293,14 @@ label {
   overflow: hidden;
   padding: 0;
   box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.card-profile .card-avatar .card-avatar-no-image {
+  width: 130px;
+  height: 130px;
+  line-height: 130px;
+  color: #000000;
+  background-color: #EEEEEE;
 }
 
 .card-profile .card-avatar+.card-body {
