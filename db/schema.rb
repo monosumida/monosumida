@@ -15,11 +15,11 @@ ActiveRecord::Schema.define(version: 2019_07_25_131040) do
   create_table "blogs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id"
     t.string "title"
+    t.text "content"
     t.boolean "public_flag"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.datetime "publish_at"
-    t.text "content"
+    t.index ["user_id"], name: "index_blogs_on_user_id"
   end
 
   create_table "roles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
