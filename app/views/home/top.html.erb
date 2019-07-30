@@ -21,7 +21,7 @@
       <div class="col-md-6 mb-4">
         <div class="card">
           <div class="dummy-image">
-            DUMMY
+            Coming soon...
           </div>
           <div class="card-body">
             <h3 class="card-heading">
@@ -33,11 +33,11 @@
       <div class="col-md-6 mb-4">
         <div class="card">
           <div class="dummy-image">
-            DUMMY
+            Coming soon...
           </div>
           <div class="card-body">
             <h3 class="card-heading">
-              <span class="link-arrow"></span><span class="link-arrow-text">What will we do?</span>
+              <span class="link-arrow"></span><span class="link-arrow-text">Our products</span>
             </h3>
           </div>
         </div>
@@ -46,8 +46,23 @@
   </div>
   <%= render 'parts/scroll', use_gray: true %>
 </article>
-<article class="next">
+<article class="next send-back">
   <div class="container">
     <h2>Members</h2>
+    <% User.all.each do |user| %>
+      <div class="home-top-member-wrapper">
+        <div class="home-top-member-image">
+          <% if !(user.image.blank?) %>
+            <%= image_tag user.image.thumb.to_s %>
+          <% end %>
+        </div>
+        <div class="home-top-member-info">
+          <div class="home-top-member-name"><%= user.name %></div>
+          <div class="home-top-member-description">
+            <%= user.description %>
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
 </article>

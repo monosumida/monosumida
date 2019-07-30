@@ -110,6 +110,10 @@ button{
   appearance: none;
 }
 
+.send-back {
+  z-index: -3;
+}
+
 /*****************************************
  * override bootstrap
  *****************************************/
@@ -206,8 +210,13 @@ article {
   }
   & h2 {
     font-family: 'Permanent Marker', cursive;
-    padding: 60px 0;
     text-align: center;
+    @media (min-width: 980px) {
+      padding: 60px 0;
+    }
+    @media (max-width: 979px) {
+      padding: 15px 0;
+    }
   }
   &:nth-of-type(even) {
     background-color: $gray;

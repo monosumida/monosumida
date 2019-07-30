@@ -35,22 +35,12 @@ $main-pink: #FAE3EB;
             transform: scale(1.002);
             box-shadow: 0 0 20px -8px rgba(0,0,0,0.4);
           }
-          .blog-thumbnail {
-            float: left;
-            width: 320px;
-            height: 180px;
-            text-align: center;
-            line-height: 180px;
-            background-color: #EEEEEE;
-            border-radius: 15px 0 0 15px;
-          }
           .blog-info-wrapper {
             position: relative;
-            float: left;
-            width: calc(100% - 320px);
+            width: 100%;
             height: 180px;
             border: 1px solid #EEEEEE;
-            border-radius: 0 15px 15px 0;
+            border-radius: 15px;
             & h1 {
               font-family: 'hack-bold';
               font-size: 1.8rem;
@@ -78,12 +68,53 @@ $main-pink: #FAE3EB;
                 height: 30px;
                 border-radius: 100%;
                 background-color: #EEEEEE;
+                & .blog-author-icon-image {
+                  width: 30px;
+                  height: 30px;
+                  border-radius: 50px;
+                }
               }
               & .blog-author-name {
                 float: left;
                 margin-bottom: 0;
                 line-height: 30px;
               }
+            }
+          }
+        }
+      }
+      & .blogs-refine-wrapper {
+        content: '';
+        display: block;
+        clear: both;
+        & .blogs-refine-link {
+          color: $black;
+          & .blogs-author {
+            width: 100%;
+            content: '';
+            display: block;
+            clear: both;
+            & .blogs-author-no-image {
+              float: left;
+              width: 50px;
+              height: 50px;
+              text-align: center;
+              line-height: 50px;
+              border-radius: 50%;
+              font-size: 8px;
+              background-color: #EEEEEE;
+            }
+            & .blogs-author-image {
+              float: left;
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+            }
+            & .blogs-author-name {
+              margin-left: 10px;
+              float: left;
+              font-size: 1.4rem;
+              line-height: 50px;
             }
           }
         }
@@ -103,18 +134,6 @@ $main-pink: #FAE3EB;
       .blog-card {
         color: $black;
         margin: 24px 0 24px;
-        .blog-thumbnail {
-          margin: 0;
-          padding: 0;
-          width: 100%;
-          // 本当に画像配置することになったら.
-          // height: auto;
-          height: 180px;
-          text-align: center;
-          line-height: 180px;
-          background-color: #EEEEEE;
-          border-radius: 15px 15px 0 0;
-        }
         .blog-info-wrapper {
           position: relative;
           margin: 0;
@@ -145,6 +164,10 @@ $main-pink: #FAE3EB;
               height: 30px;
               border-radius: 100%;
               background-color: #EEEEEE;
+              & .blog-author-icon-image {
+                width: 30px;
+                height: 30px;
+              }
             }
             .blog-author-name {
               float: left;

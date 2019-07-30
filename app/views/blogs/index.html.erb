@@ -11,7 +11,27 @@
           <% end %>
         </div>
       <% end %>
-      <%= render @blogs %>
+      <div class="row">
+        <div class="col-3">
+          <div class="blogs-refine-wrapper">
+            <% User.all.each do |user| %>
+              <%= link_to blogs_path(author: user.name), class: "blogs-refine-link" do %>
+                <div class="blogs-author">
+                  <% if user.image.blank? %>
+                    <div class="blogs-author-no-image"></div>
+                  <% else %>
+                    <%= image_tag user.image.thumb.to_s, class: 'blogs-author-image' %>
+                  <% end %>
+                  <span class="blogs-author-name"><%= user.name %></span>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+        <div class="col-9">
+          <%= render @blogs %>
+        </div>
+      </div>
     </div>
   </div>
 </main>

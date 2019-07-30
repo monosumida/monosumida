@@ -1,3 +1,12 @@
+$black: #1F262A;
+$red: #A34747;
+$light-gray: #5B676D;
+$dark-gray: #2A3439;
+$gray: #ECF0F1;
+$white: #FFFFFF;
+$main-blue: #184AFB;
+$main-pink: #FAE3EB;
+
 .home-top-top-wrapper {
   position: relative;
   margin: 0;
@@ -28,6 +37,92 @@
       font-family: 'kollek-bold';
       font-size: 12px;
       margin: 10px 10px;
+    }
+  }
+}
+
+@media (min-width: 980px) {
+  .home-top-member-wrapper {
+    height: 400px;
+    &::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    .home-top-member-image {
+      float: left;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background-color: #EEEEEE;
+      img {
+        box-shadow: 0 0 30px -10px #000000;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+      }
+    }
+    .home-top-member-info {
+      width: calc(100% - 300px);
+      height: 400px;
+      padding: 10px 30px;
+      float: left;
+      .home-top-member-name {
+        padding-bottom: 10px;
+        font-family: 'hack-bolditalic';
+        font-size: 2.6rem;
+        border-bottom: 1px solid #000;
+      }
+      .home-top-member-description {
+        margin-top: 30px;
+        font-family: 'hack';
+        font-size: 1rem;
+        line-height: 1.5;
+        color: $black;
+        background-color: $white;
+        padding: 30px;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: 979px) {
+  .home-top-member-wrapper {
+    position: relative;
+    .home-top-member-image {
+      margin: 0 auto;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: #EEEEEE;
+      img {
+        box-shadow: 0 0 30px -10px #000000;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+      }
+    }
+    .home-top-member-info {
+      position: relative;
+      top: -72.5px;
+      width: 100%;
+      padding-top: 72.5px;
+      background-color: $white;
+      border-radius: 5px;
+      z-index: -1;
+      .home-top-member-name {
+        margin-top: 45px;
+        margin-bottom: 15px;
+        text-align: center;
+        padding-bottom: 10px;
+        font-family: 'hack-bolditalic';
+        font-size: 2.6rem;
+      }
+      .home-top-member-description {
+        color: #999999;
+        padding: 30px;
+      }
     }
   }
 }
