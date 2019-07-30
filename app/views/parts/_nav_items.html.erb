@@ -1,7 +1,9 @@
 <%= link_to root_path, class: 'brand' do %><h1 class="global-nav-logo">Mono<br>sumida</h1><% end %>
 <ul>
   <li><%= link_to 'BLOG', blogs_path, class: "#{'current' if current_here?('blogs')}" %></li>
-  <li><%= link_to 'TOPIC', topics_path, class: "#{'current' if current_here?('topics')}" %></li>
+  <% if false %>
+    <li><%= link_to 'TOPIC', topics_path, class: "#{'current' if current_here?('topics')}" %></li>
+  <% end %>
   <% if logged_in? && current_user.admin? %>
     <li><%= link_to 'ADMIN', admin_root_path %></li>
   <% end %>

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :topics
+  # resources :topics
   resources :blogs do
     collection do
       get 'preview', as: :preview
