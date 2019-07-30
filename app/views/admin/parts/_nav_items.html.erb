@@ -12,3 +12,10 @@
     <p>Blogs</p>
   <% end %>
 </li>
+<!-- Users -->
+<li class="nav-item<%= "#{' active' if current_here_from_admin?('users')}" %>">
+  <%= link_to admin_users_path, class: 'nav-link' do %>
+    <i class="material-icons">person</i>
+    <p>Users</p>
+  <% end %>
+</li>

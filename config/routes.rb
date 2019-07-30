@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :sessions
     resources :blogs, only: %i[index edit update destroy]
+    resources :users, only: %i[index edit update destroy]
     root 'dashboard#index'
   end
   root 'home#top'
