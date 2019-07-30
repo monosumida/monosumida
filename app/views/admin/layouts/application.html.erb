@@ -14,12 +14,16 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="admin-body">
     <% if notice %><%= render 'parts/notice', notice: notice %><% end %>
     <% if alert %><%= render 'parts/alert', alert: alert %><% end %>
     <div class="wrapper ">
       <%= render 'admin/parts/nav' %>
-      <%= yield %>
+      <div class="main-panel">
+        <div class="content">
+          <%= yield %>
+        </div>
+      </div>
     </div>
   </body>
 </html>

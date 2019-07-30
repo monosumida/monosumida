@@ -1,0 +1,14 @@
+<!-- Dashboard -->
+<li class="nav-item<%= "#{' active' if current_admin_root?}" %>">
+  <%= link_to admin_root_path, class: 'nav-link' do %>
+    <i class="material-icons">dashboard</i>
+    <p>Dashboard</p>
+  <% end %>
+</li>
+<!-- Blogs -->
+<li class="nav-item<%= "#{' active' if current_here_from_admin?('blogs')}" %>">
+  <%= link_to admin_blogs_path, class: 'nav-link' do %>
+    <i class="material-icons">all_inbox</i>
+    <p>Blogs</p>
+  <% end %>
+</li>

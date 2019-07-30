@@ -1,18 +1,15 @@
-<%= link_to blog_path(blog) do %>
-  <div class="blog-card-wrapper">
-    <div class="blog-card">
-      <div class="blog-thumbnail">
-        dummy
-      </div>
-      <div class="blog-info-wrapper">
-        <h1><%= blog.title %></h1>
-        <p class="blog-publish-at"><i class="far fa-clock"></i><%= blog.created_at.strftime('%y/%m/%d %H:%M') %></p>
-        <div class="blog-author clearfix">
-          <div class="blog-author-icon">
-          </div>
-          <p class="blog-author-name"><%= blog.user.name %></p>
-        </div>
-      </div>
-    </div>
-  </div>
-<% end %>
+<tr>
+  <td><%= blog.id %></td>
+  <td><%= blog.user.name %></td>
+  <td><%= blog.title %></td>
+  <td><%= blog.content.truncate(30) %></td>
+  <td>
+    <% if blog.public_flag? %>
+      <span class="badge badge-success">公開中</span>
+    <% else %>
+      <span class="badge badge-danger">非公開</span>
+    <% end %>
+  </td>
+  <td><%= link_to 'Edit', edit_admin_blog_path(blog), class: 'btn btn-info' %></td>
+  <td><%= link_to 'Destroy', admin_blog_path(blog), class: 'btn btn-danger', method: :delete, data: { confirm: '本当に削除しますか？' } %></td>
+</tr>

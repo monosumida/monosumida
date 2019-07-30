@@ -3,18 +3,16 @@ class BlogsController < ApplicationController
   protect_from_forgery except: [:preview]
 
   def index
-    @blogs = Blog.active
+    @blogs = Blog.all
   end
 
-  def show
-  end
+  def show;end
 
   def new
     @blog = current_user.blogs.build
   end
 
-  def edit
-  end
+  def edit;end
 
   def create
     @blog = current_user.blogs.build(blog_params)

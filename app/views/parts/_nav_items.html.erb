@@ -3,7 +3,7 @@
   <li><%= link_to 'BLOG', blogs_path, class: "#{'current' if current_here?('blogs')}" %></li>
   <li><%= link_to 'TOPIC', topics_path, class: "#{'current' if current_here?('topics')}" %></li>
   <% if logged_in? && current_user.admin? %>
-    <li><%= link_to 'ADMIN', admin_session_path(current_user), method: :delete %></li>
+    <li><%= link_to 'ADMIN', admin_root_path %></li>
   <% end %>
   <% if logged_in? %>
     <li><%= link_to 'LOGOUT', admin_session_path(current_user), method: :delete %></li>

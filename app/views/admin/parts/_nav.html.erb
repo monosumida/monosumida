@@ -4,16 +4,11 @@
     Tip 2: you can also add an image using data-image tag
   -->
   <div class="logo">
-    <%= link_to admin_root_path, class: 'simple-text logo-normal' do %>Mono<br>sumida<% end %>
+    <%= link_to admin_root_path, class: 'logo-monosumida' do %>Mono<br>sumida<% end %>
   </div>
   <div class="sidebar-wrapper">
     <ul class="nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#0">
-          <i class="material-icons">dashboard</i>
-          <p>Dashboard</p>
-        </a>
-      </li>
+      <%= render 'admin/parts/nav_items' %>
     </ul>
   </div>
 </div>
