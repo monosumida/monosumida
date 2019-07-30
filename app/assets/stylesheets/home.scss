@@ -82,6 +82,10 @@ $main-pink: #FAE3EB;
         background-color: $white;
         padding: 30px;
         border-radius: 5px;
+        p {
+          white-space: pre-wrap;
+          word-wrap: break-word;
+        }
       }
     }
   }
@@ -122,6 +126,10 @@ $main-pink: #FAE3EB;
       .home-top-member-description {
         color: #999999;
         padding: 30px;
+        p {
+          white-space: pre-wrap;
+          word-wrap: break-word;
+        }
       }
     }
   }
