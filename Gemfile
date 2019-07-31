@@ -42,9 +42,12 @@ gem 'redcarpet'
 # Operate image
 gem 'rmagick', '2.13.4', :require => 'RMagick'
 gem 'carrierwave', '>= 2.0.0.rc', '< 3.0'
+gem 'fog'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+# Use AWS S3 storage for heroku
+gem "aws-sdk-s3", require: false
 
 group :development, :test do
   # Use mysql as the database for Active Record
