@@ -49,7 +49,7 @@
 <article class="next send-back">
   <div class="container">
     <h2>Members</h2>
-    <% User.all.order(id: :asc).each do |user| %>
+    <% User.administrators.each do |user| %>
       <div class="home-top-member-wrapper">
         <div class="home-top-member-image">
           <% if !(user.image.blank?) %>

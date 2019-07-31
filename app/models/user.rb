@@ -13,6 +13,8 @@ class User < ApplicationRecord
   validates :email, presence: true
   validates :email, uniqueness: true
 
+  scope :administrators, -> { joins(:roles).where(roles: { name: 'admin' }).order(id: :asc) }
+
   def admin?
     roles.pluck(:name).include?('admin')
   end

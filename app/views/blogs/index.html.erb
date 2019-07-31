@@ -14,7 +14,7 @@
       <div class="row">
         <div class="col-3">
           <div class="blogs-refine-wrapper d-md-block d-none">
-            <% User.all.each do |user| %>
+            <% User.administrators.each do |user| %>
               <%= link_to blogs_path(author: user.name), class: "blogs-refine-link" do %>
                 <div class="blogs-author">
                   <% if user.image.blank? %>
