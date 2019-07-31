@@ -1,11 +1,24 @@
 <main class="blog-wrapper">
   <div class="container">
-    <% if logged_in? %>
-      <%= link_to edit_blog_path(@blog), class: 'blog-edit-link' do %>
-        <i class="far fa-edit"></i>
-        <span class="blog-edit-link-text">編集を続ける</span>
-      <% end %>
+  <div class="row blog-information-wrapper">
+    <div class="col-md-6">
+      <div class="blog-author-info-wrapper clearfix">
+        <%= image_tag @blog.user.image.thumb.to_s, class: 'float-left' %>
+        <p class="float-left"><%= @blog.user.name %></p>
+        <div class="blog-updated-at">
+          <%= @blog.updated_at.strftime("%Y年%m月%d日に更新") %>
+        </div>
+      </div>
+    </div>
+    <% if @blog.user.id == current_user.try(:id) %>
+      <div class="col-md-6 clearfix">
+        <%= link_to edit_blog_path(@blog), class: 'blog-edit-link' do %>
+          <i class="far fa-edit"></i>
+          <span class="blog-edit-link-text">編集を続ける</span>
+        <% end %>
+      </div>
     <% end %>
+  </div>
     <h1><%= @blog.title %></h1>
     <div class="blog-conetent-wrapper">
       <%= markdown(@blog.content) %>
