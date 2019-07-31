@@ -52,6 +52,9 @@ gem "aws-sdk-s3", require: false
 # For seed
 gem 'seed-fu'
 
+# Use nested field
+gem 'cocoon'
+
 group :development, :test do
   # Use mysql as the database for Active Record
   gem 'mysql2'

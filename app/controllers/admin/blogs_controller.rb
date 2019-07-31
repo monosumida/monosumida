@@ -38,6 +38,9 @@ class Admin::BlogsController < Admin::ApplicationController
     end
 
     def blog_param_items
-      %i[public_flag]
+      [
+        :public_flag,
+        blog_categories_attributes: [:id, :category_id, :_destroy]
+      ]
     end
 end

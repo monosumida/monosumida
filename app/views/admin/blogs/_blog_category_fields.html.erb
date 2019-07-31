@@ -1,0 +1,6 @@
+<div class="nested-fields field">
+  <div class="col-md-12">
+    <%= f.collection_select :category_id, Category.all, :id, :name, {}, class: 'form-control' %>
+  </div>
+  <%= link_to_remove_association '削除', f, class: 'btn btn-danger' %>
+</div>

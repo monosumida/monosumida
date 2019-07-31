@@ -9,6 +9,24 @@
     </div>
   </div>
 
+  <hr>
+
+  <div class="row">
+    <div class="col-md-6">
+      <label>カテゴリ名</label>
+      <%= form.fields_for :blog_categories do |blog_category| %>
+        <%= render 'blog_category_fields', f: blog_category %>
+      <% end %>
+      <div class="links">
+        <%= link_to_add_association 'カテゴリを追加', form, :blog_categories, class: 'btn btn-success' %>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <label>コンテンツ</label>
+
   <div class="row">
     <div class="col-md-12">
       <h1><%= blog.title %></h1>
