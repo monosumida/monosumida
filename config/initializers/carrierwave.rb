@@ -6,6 +6,6 @@ CarrierWave.configure do |config|
     region: 'ap-northeast-1'
   }
 
-  config.fog_directory  = 'rails-photo-123'
+  config.fog_directory  = 'monosumida-bucket'
   config.cache_storage = :fog
 end
