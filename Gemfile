@@ -49,6 +49,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # Use AWS S3 storage for heroku
 gem "aws-sdk-s3", require: false
 
+# For seed
+gem 'seed-fu'
+
 group :development, :test do
   # Use mysql as the database for Active Record
   gem 'mysql2'
