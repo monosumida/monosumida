@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :sessions
     resources :blogs, only: %i[index edit update destroy]
     resources :users, only: %i[index edit update destroy]
+    resources :categories
     root 'dashboard#index'
   end
   root 'home#top'
