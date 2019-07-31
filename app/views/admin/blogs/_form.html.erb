@@ -18,7 +18,7 @@
   <div class="row">
     <div class="col-md-12">
       <div class="blog-conetent-wrapper">
-        <%= markdown(blog.content) %>
+        <%= markdown(blog.content.truncate(200)) %>
       </div>
     </div>
   </div>
