@@ -12,24 +12,16 @@
         </div>
       <% end %>
       <div class="row">
-        <div class="col-3">
-          <div class="blogs-refine-wrapper d-md-block d-none">
-            <% User.administrators.each do |user| %>
-              <%= link_to blogs_path(author: user.name), class: "blogs-refine-link" do %>
-                <div class="blogs-author">
-                  <% if user.image.blank? %>
-                    <div class="blogs-author-no-image"></div>
-                  <% else %>
-                    <%= image_tag user.image.thumb.to_s, class: 'blogs-author-image' %>
-                  <% end %>
-                  <span class="blogs-author-name"><%= user.name %></span>
-                </div>
-              <% end %>
-            <% end %>
+        <div class="col-2 d-md-block d-none">
+          <div class="blogs-author-wrapper">
+            <%= render 'author_menu' %>
           </div>
         </div>
-        <div class="col-md-9 col-12">
+        <div class="col-md-8 col-12">
           <%= render @blogs %>
+        </div>
+        <div class="col-2 d-md-block d-none">
+          <%= render 'categories_menu' %>
         </div>
       </div>
     </div>

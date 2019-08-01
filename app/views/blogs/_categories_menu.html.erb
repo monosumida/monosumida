@@ -1,0 +1,3 @@
+<% Category.all.each do |category| %>
+  <%= link_to category.name, blogs_path(author: params[:author], category: category.name), class: "blogs-category-link#{" active" if params[:category] == category.name}" %>
+<% end %>

@@ -8,4 +8,5 @@ class Blog < ApplicationRecord
   validates :title, presence: true
 
   scope :active, -> { where(public_flag: true).order(created_at: :desc) }
+  scope :belonging_to_category, ->(name) { joins(:categories).where(categories: { name: name} ) }
 end
