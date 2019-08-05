@@ -1,9 +1,5 @@
 require 'fileutils'
 
-# 毎回画像を全て削除する
-Dir.chdir 'public/uploads/user/image/'
-FileUtils.rm(Dir.glob('*.*'))
-
 file_path = Rails.root.join('db/fixtures/development/files')
 
 User.seed do |u|
