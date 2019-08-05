@@ -5,14 +5,18 @@ class BlogsController < ApplicationController
   protect_from_forgery except: [:preview]
 
   def index
-    if params[:author].present?
-      _user_id = User.find_by(name: params[:author]).try(:id)
-      @blogs = Blog.active.where(user_id: _user_id)
+    if current_user.try(:admin?)
+      @blogs = Blog.all.order(created_at: :desc)
     else
-      @blogs = Blog.active
-    end
-    if params[:category].present?
-      @blogs = @blogs.belonging_to_category(params[:category])
+      if params[:author].present?
+        _user_id = User.find_by(name: params[:author]).try(:id)
+        @blogs = Blog.active.where(user_id: _user_id)
+      else
+        @blogs = Blog.active
+      end
+      if params[:category].present?
+        @blogs = @blogs.belonging_to_category(params[:category])
+      end
     end
   end
 
