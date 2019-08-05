@@ -1,5 +1,7 @@
 class BlogsController < ApplicationController
+  before_action :admin?, except: [:index, :show]
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  before_action :published?, only: [:show]
   protect_from_forgery except: [:preview]
 
   def index
@@ -76,5 +78,17 @@ class BlogsController < ApplicationController
 
     def blog_param_items
       %i[title content]
+    end
+
+    def admin?
+      if current_user.try(:admin?)
+        redirect_to blogs_url, alert: '権限がありません'
+      end
+    end
+
+    def published?
+      if !(@blog.public_flag || current_user.try(:admin?))
+        redirect_to blogs_url, alert: '権限がありません'
+      end
     end
 end
