@@ -30,56 +30,43 @@ $main-pink: #FAE3EB;
           position: relative;
           height: 180px;
           margin-bottom: 30px;
+          border: 1px solid #EEEEEE;
           border-radius: 15px;
-          transition: .2s;
-          transition: transform .2s linear;
+          transition: .1s;
+          transition: transform .1s linear;
           &:hover {
-            transform: scale(1.0015);
+            transform: scale(1.002);
             box-shadow: 0 0 20px -15px rgba(0,0,0,.4);
           }
-          .blog-info-wrapper {
+          .blog-card-author-img {
+            float: left;
+            margin-top: 15px;
+            margin-left: 15px;
+            width: 150px;
+            height: 150px;
+            img {
+              width: 150px;
+              height: 150px;
+              border-radius: 5px;
+            }
+          }
+          .blog-card-info {
             position: relative;
-            width: 100%;
-            height: 180px;
-            border: 1px solid #EEEEEE;
-            border-radius: 15px;
-            & h1 {
-              font-family: 'hack-bold';
+            float: left;
+            width: calc(100% - 195px);
+            height: 150px;
+            margin: 15px 15px 0;
+            h1 {
+              font-family: 'kollek-bold';
               font-size: 1.8rem;
-              margin: 15px 30px;
-              word-wrap: break-word;
             }
-            & p.blog-publish-at {
+            .blog-categories {
               position: absolute;
-              left: 30px;
-              bottom: 15px;
-              margin: 0;
-              padding: 0;
-              & i {
-                margin-right: 5px;
-              }
-            }
-            & .blog-author {
-              position: absolute;
-              right: 30px;
-              bottom: 15px;
-              & .blog-author-icon {
-                float: left;
-                margin-right: 5px;
-                width: 30px;
-                height: 30px;
-                border-radius: 100%;
+              bottom: 5px;
+              span {
+                margin-right: 15px;
+                padding: 0.5rem 0.8rem;
                 background-color: #EEEEEE;
-                & .blog-author-icon-image {
-                  width: 30px;
-                  height: 30px;
-                  border-radius: 50px;
-                }
-              }
-              & .blog-author-name {
-                float: left;
-                margin-bottom: 0;
-                line-height: 30px;
               }
             }
           }
@@ -175,46 +162,27 @@ $main-pink: #FAE3EB;
       .blog-card {
         color: $black;
         margin: 10px 0;
-        .blog-info-wrapper {
-          position: relative;
-          margin: 0;
-          padding: 8px 10px;
+        border: 1px solid #EEEEEE;
+        border-radius: 15px;
+        .blog-card-author-img {
+          display: none;
+        }
+        .blog-card-info {
           width: 100%;
-          min-height: 120px;
-          border: 1px solid #EEE;
-          border-radius: 15px;
+          .blog-posted-at {
+            margin: 10px 10px 5px 10px;
+          }
           h1 {
-            font-family: 'hack-bold';
+            margin: 0 10px 10px 10px;
             font-size: 1.2rem;
-            word-wrap: break-word;
           }
-          & .blog-publish-at {
-            position: absolute;
-            left: 12px;
-            bottom: 12px;
-            margin-bottom: 0;
-          }
-          & .blog-author {
-            position: absolute;
-            right: 8px;
-            bottom: 8px;
-            .blog-author-icon {
-              float: left;
-              margin-right: 8px;
-              width: 30px;
-              height: 30px;
-              border-radius: 100%;
+          .blog-categories {
+            margin: 5px 10px 10px 10px;
+            span {
+              display: inline-block;
+              padding: .2rem .5rem;
+              margin-bottom: 10px;
               background-color: #EEEEEE;
-              & .blog-author-icon-image {
-                width: 30px;
-                height: 30px;
-                border-radius: 50%;
-              }
-            }
-            & .blog-author-name {
-              float: left;
-              margin-bottom: 0;
-              line-height: 30px;
             }
           }
         }
