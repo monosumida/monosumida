@@ -85,7 +85,7 @@ class BlogsController < ApplicationController
     end
 
     def admin?
-      if current_user.try(:admin?)
+      if !(current_user.try(:admin?))
         redirect_to blogs_url, alert: '権限がありません'
       end
     end
