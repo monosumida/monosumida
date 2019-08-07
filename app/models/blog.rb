@@ -1,6 +1,6 @@
 class Blog < ApplicationRecord
   belongs_to :user
-  has_many :blog_categories
+  has_many :blog_categories, dependent: :destroy
   has_many :categories, through: :blog_categories
 
   accepts_nested_attributes_for :blog_categories, allow_destroy: true
