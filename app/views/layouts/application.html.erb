@@ -19,5 +19,6 @@
     <% if notice %><%= render 'parts/notice', notice: notice %><% end %>
     <% if alert %><%= render 'parts/alert', alert: alert %><% end %>
     <%= yield %>
+    <%= render 'parts/footer' %>
   </body>
 </html>
