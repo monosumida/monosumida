@@ -1,45 +1,25 @@
-/*!
-
- =========================================================
- * Material Dashboard - v2.1.1
- =========================================================
-
- * Product Page: https://www.creative-tim.com/product/material-dashboard
- * Copyright 2018 Creative Tim (http://www.creative-tim.com)
-
- * Designed by www.invisionapp.com Coded by www.creative-tim.com
-
- =========================================================
-
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
- */
-
-(function() {
-})();
-
-
-var breakCards = true;
-
-var searchVisible = 0;
-var transparent = true;
-
-var transparentDemo = true;
-var fixedTop = false;
-
-var mobile_menu_visible = 0,
-  mobile_menu_initialized = false,
-  toggle_initialized = false,
-  bootstrap_nav_initialized = false;
-
-var seq = 0,
-  delays = 80,
-  durations = 500;
-var seq2 = 0,
-  delays2 = 80,
-  durations2 = 500;
-
 document.addEventListener('turbolinks:load', function() {
+
+  var breakCards = true;
+
+  var searchVisible = 0;
+  var transparent = true;
+
+  var transparentDemo = true;
+  var fixedTop = false;
+
+  var mobile_menu_visible = 0,
+   mobile_menu_initialized = false,
+   toggle_initialized = false,
+   bootstrap_nav_initialized = false;
+
+  var seq = 0,
+   delays = 80,
+   durations = 500;
+  var seq2 = 0,
+   delays2 = 80,
+   durations2 = 500;
+
   isWindows = navigator.platform.indexOf('Win') > -1 ? true : false;
 
   if (isWindows) {
