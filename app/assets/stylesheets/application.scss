@@ -450,8 +450,8 @@ article {
  *****************************************/
 footer {
   width: 100vw;
-  background-color: $main-pink;
-  padding: 50px;
+  background-color: $black;
+  padding: 15px;
   &::before,
   &::after {
     content: '';
@@ -459,10 +459,10 @@ footer {
     padding: 30px;
   }
   .follow-me {
-    color: $main-blue;
+    color: $white;
     text-align: center;
     font-family: 'hack-bolditalic';
-    font-size: 2.8rem;
+    font-size: 1.8rem;
     padding: 30px auto;
   }
   .follow-icons {
@@ -476,17 +476,24 @@ footer {
       }
       i {
         font-size: 60px;
-        color: $main-blue;
+        color: $white;
       }
     }
   }
   .footer-logo-wrapper {
     margin: 0;
-    height: 200px;
+    height: 300px;
+    &:after {
+      content: '';
+      display: block;
+      margin-bottom: 15px;
+    }
     .footer-logo {
       margin: 30px auto;
       width: 200px;
       & .footer-brand-name {
+        color: $black;
+        background-color: $white;
         position: relative;
         margin: 0;
         width: 100%;
@@ -500,10 +507,17 @@ footer {
         }
       }
       & p {
+        color: $white;
         font-family: 'kollek-bold';
         font-size: 12px;
         padding: 10px 10px;
       }
     }
+  }
+  .footer-copy-right {
+    font-family: 'kollek';
+    color: $white;
+    text-align: center;
+    font-size: 0.8rem;
   }
 }
