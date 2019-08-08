@@ -41,6 +41,28 @@ $main-pink: #FAE3EB;
   }
 }
 
+.home-top-description-wrapper {
+  margin: 30px -500%;
+  padding: 90px;
+  background-color: $black;
+  p.home-top-description {
+    font-family: "M PLUS Rounded 1c";
+    color: $white;
+    width: 980px;
+    margin: 30px auto;
+    line-height: 2.4;
+    text-align: center;
+    font-family: 'kollek';
+    font-size: 1.2rem;
+  }
+}
+
+.dummy-image.coming-soon {
+  font-family: 'hack-bolditalic';
+  font-size: 1.2rem;
+}
+
+
 @media (min-width: 980px) {
   .home-top-member-wrapper {
     height: 400px;
