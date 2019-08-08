@@ -462,21 +462,21 @@ footer {
     color: $white;
     text-align: center;
     font-family: 'hack-bolditalic';
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     padding: 30px auto;
   }
   .follow-icons {
-    width: 320px;
+    width: 315px;
     margin: 30px auto;
     a {
       display: inline-block;
-      margin-left: 70px;
       &:first-child {
         margin-left: 0;
       }
-      i {
-        font-size: 60px;
+      i::before {
+        font-size: 80px;
         color: $white;
+        margin-left: 25px;
       }
     }
   }
@@ -518,6 +518,6 @@ footer {
     font-family: 'kollek';
     color: $white;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
