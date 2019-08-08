@@ -1,3 +1,19 @@
+/*!
+
+ =========================================================
+ * Material Dashboard - v2.1.1
+ =========================================================
+
+ * Product Page: https://www.creative-tim.com/product/material-dashboard
+ * Copyright 2018 Creative Tim (http://www.creative-tim.com)
+
+ * Designed by www.invisionapp.com Coded by www.creative-tim.com
+
+ =========================================================
+
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+ */
 var breakCards = true;
 
 var searchVisible = 0;
@@ -33,8 +49,9 @@ document.addEventListener('turbolinks:load', function() {
   $('html').removeClass('nav-open');
   $('.close-layer').remove();
   setTimeout(function() {
-    $('.navbar-toggler').removeClass('toggled');
+    $toggle.removeClass('toggled');
   }, 400);
+  mobile_menu_visible = 0;
 
   $('body').bootstrapMaterialDesign();
 
@@ -73,8 +90,14 @@ document.addEventListener('turbolinks:load', function() {
 $(document).on('click', '.navbar-toggler', function() {
   $toggle = $(this);
 
-  if (mobile_menu_visible == 0) {
-    console.log('hiroto');
+  if (mobile_menu_visible == 1) {
+    $('html').removeClass('nav-open');
+    $('.close-layer').remove();
+    setTimeout(function() {
+      $toggle.removeClass('toggled');
+    }, 400);
+    mobile_menu_visible = 0;
+  } else {
     setTimeout(function() {
       $toggle.addClass('toggled');
     }, 430);
@@ -104,12 +127,36 @@ $(document).on('click', '.navbar-toggler', function() {
 $(document).on('click', '.close-layer', function() {
   $toggle = $('.navbar-toggler');
 
-  if (mobile_menu_visible == 1) {
+  if (mobile_menu_visible == 0) {
     $('html').removeClass('nav-open');
     $('.close-layer').remove();
     setTimeout(function() {
       $toggle.removeClass('toggled');
     }, 400);
+    mobile_menu_visible = 1;
+  } else {
+    setTimeout(function() {
+      $toggle.addClass('toggled');
+    }, 430);
+    var $layer = $('<div class="close-layer"></div>');
+    if ($('body').find('.main-panel').length != 0) {
+      $layer.appendTo(".main-panel");
+    } else if (($('body').hasClass('off-canvas-sidebar'))) {
+      $layer.appendTo(".wrapper-full-page");
+    }
+    setTimeout(function() {
+      $layer.addClass('visible');
+    }, 100);
+    $layer.click(function() {
+      $('html').removeClass('nav-open');
+      mobile_menu_visible = 1;
+      $layer.removeClass('visible');
+      setTimeout(function() {
+        $layer.remove();
+        $toggle.removeClass('toggled');
+      }, 400);
+    });
+    $('html').addClass('nav-open');
     mobile_menu_visible = 0;
   }
 });
@@ -270,7 +317,7 @@ md = {
 
   initSidebarsCheck: function() {
     if ($(window).width() <= 991) {
-      if ($('.sidebar').length != 0) {
+      if ($sidebar.length != 0) {
         md.initRightMenu();
       }
     }
@@ -438,11 +485,15 @@ md = {
 
       nav_content = '<ul class="nav navbar-nav nav-mobile-menu">' + nav_content + '</ul>';
 
+      navbar_form = $('nav').find('.navbar-form').get(0).outerHTML;
+
       $sidebar_nav = $sidebar_wrapper.find(' > .nav');
 
       // insert the navbar form before the sidebar list
       $nav_content = $(nav_content);
+      $navbar_form = $(navbar_form);
       $nav_content.insertBefore($sidebar_nav);
+      $navbar_form.insertBefore($nav_content);
 
       $(".sidebar-wrapper .dropdown .dropdown-menu > li > a").click(function(event) {
         event.stopPropagation();

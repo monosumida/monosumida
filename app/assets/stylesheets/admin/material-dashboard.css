@@ -18365,7 +18365,7 @@ Copyright (c) 2015 Daniel Eden
     opacity: 0;
     top: 0;
     left: auto;
-    background: rgba(0, 0, 0, 0.35);
+    background: rgba(0, 0, 0, 0.45);
     content: "";
     z-index: 9999;
     overflow-x: hidden;
@@ -18381,7 +18381,7 @@ Copyright (c) 2015 Daniel Eden
   .navbar-toggler .icon-bar {
     display: block;
     position: relative;
-    background: #555 !important;
+    background: #111 !important;
     width: 24px;
     height: 2px;
     border-radius: 1px;
@@ -18610,6 +18610,11 @@ Copyright (c) 2015 Daniel Eden
     -webkit-animation-fill-mode: forwards;
     -moz-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+  }
+  .navbar-toggler.toggled {
+    position: absolute;
+    right: 280px;
+    z-index: 999;
   }
   .navbar-toggler.toggled .icon-bar:nth-child(2) {
     top: 6px;
