@@ -20,12 +20,16 @@ document.addEventListener('turbolinks:load', function() {
   });
 
   // ページを離れる時の警告を出す
-  window.onbeforeunload = function(e) {
+  $(window).on('beforeunload', function(e) {
     if($('#form-target').length) {
       return "このページを離れますか？";
       e.returnValue = "このページを離れますか？";
     }
-  }
+  });
+
+  $('input[type=submit]').on('click', function(e) {
+    $(window).off('beforeunload');
+  });
 
   // ハンバーガーメニューの表示
   $('#hamburger').on('click', function() {

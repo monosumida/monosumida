@@ -249,6 +249,10 @@ $main-pink: #FAE3EB;
   }
 }
 
+#blog_form {
+  margin-bottom: 0;
+}
+
 .blog-new-wrapper,
 .blog-edit-wrapper {
   background-color: $gray;
@@ -341,7 +345,7 @@ $main-pink: #FAE3EB;
       left: 0;
       bottom: 0;
       width: 100vw;
-      height: 55px;
+      height: 60px;
       & .btn {
         float: right;
         margin-right: 30px;

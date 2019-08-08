@@ -19,6 +19,8 @@
     <% if notice %><%= render 'parts/notice', notice: notice %><% end %>
     <% if alert %><%= render 'parts/alert', alert: alert %><% end %>
     <%= yield %>
+    <% if !(controller_name == 'blogs' && action_name == 'new' || action_name == 'edit') %>
     <%= render 'parts/footer' %>
+    <% end %>
   </body>
 </html>
