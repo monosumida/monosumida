@@ -17,11 +17,6 @@
 <article>
   <div class="container">
     <h2>About</h2>
-    <div class="row">
-      <div class="col-md-8 mx-auto">
-        <%= image_tag 'home/monosumida.jpg', class: 'img-fluid' %>
-      </div>
-    </div>
     <div class="home-top-description-wrapper d-none d-md-block">
       <p class="home-top-description">
         <b>Monosumida</b> は、「モノ×モトスミヨシ×イダ」を捩った造語で、<br>
@@ -36,8 +31,8 @@
     <div class="row">
       <div class="col-md-6 mb-4">
         <%= link_to 'https://monosumida.herokuapp.com/blogs/1' do %>
-          <div class="card">
-            <%= image_tag 'home/about-monosumida.jpeg', class: 'img-fluid' %>
+          <div class="card about-card-link">
+            <%= image_tag 'home/about-monosumida.jpeg', class: 'img-fluid about-img' %>
             <div class="card-body">
               <h3 class="card-heading">
                 <span class="link-arrow"></span><span class="link-arrow-text">What will we do?</span>
@@ -48,9 +43,7 @@
       </div>
       <div class="col-md-6 mb-4">
         <div class="card">
-          <div class="dummy-image coming-soon">
-            Coming soon...
-          </div>
+          <%= image_tag 'home/coming-soon.jpeg', class: 'img-fluid' %>
           <div class="card-body">
             <h3 class="card-heading">
               <span class="link-arrow"></span><span class="link-arrow-text">Our products</span>
