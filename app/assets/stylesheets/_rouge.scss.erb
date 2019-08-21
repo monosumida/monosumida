@@ -28,9 +28,14 @@
     font-size: 1rem;
     line-height: 2;
     img {
-      display: block;
-      margin: 0 auto;
-      max-width: 870px;
+      @media(min-width: 980px) {
+        max-width: 870px;
+        display: block;
+        margin: 0 auto;
+      }
+      @media(max-width: 979px) {
+        width: 100%;
+      }
     }
   }
   ul > li {
@@ -43,13 +48,18 @@
   h4 code,
   h5 code,
   h6 code,
-  ul > li code {
+  ul > li code,
+  ol > li code {
     font-size: .9rem;
     font-family: 'hack';
     padding: .1rem .4rem;
     color: #4A4A4A;
     background-color: #EEEEEE;
     border-radius: 3px;
+  }
+  ul > li,
+  ol > li {
+    margin-bottom: 10px;
   }
   blockquote {
     border-left: 5px solid #ddd;
