@@ -28,9 +28,14 @@
     font-size: 1rem;
     line-height: 2;
     img {
-      display: block;
-      margin: 0 auto;
-      max-width: 870px;
+      @media(min-width: 980px) {
+        max-width: 870px;
+        display: block;
+        margin: 0 auto;
+      }
+      @media(max-width: 979px) {
+        width: 100%;
+      }
     }
   }
   ul > li {
