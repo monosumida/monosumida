@@ -42,14 +42,16 @@
         <% end %>
       </div>
       <div class="col-md-6 mb-4">
-        <div class="card">
-          <%= image_tag 'home/coming-soon.jpeg', class: 'img-fluid' %>
-          <div class="card-body">
-            <h3 class="card-heading">
-              <span class="link-arrow"></span><span class="link-arrow-text">Our products</span>
-            </h3>
+        <%= link_to 'https://github.com/dj-hirrot/gorilla' do %>
+          <div class="card about-card-link">
+            <%= image_tag 'home/gorilla.jpg', class: 'img-fluid about-img' %>
+            <div class="card-body">
+              <h3 class="card-heading">
+                <span class="link-arrow"></span><span class="link-arrow-text">Gorilla template</span>
+              </h3>
+            </div>
           </div>
-        </div>
+        <% end %>
       </div>
     </div>
   </div>
