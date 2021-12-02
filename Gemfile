@@ -35,7 +35,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 # Use user authentication
-gem 'sorcery', '~> 0.9.1'
+gem 'sorcery', '~> 0.15.0'
 # Enable markdown
 gem 'rouge'
 gem 'redcarpet'
