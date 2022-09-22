@@ -28,7 +28,6 @@ document.addEventListener('turbolinks:load', function() {
   $(window).on('beforeunload', function(e) {
     if($('#form-target').length) {
       return "このページを離れますか？";
-      e.returnValue = "このページを離れますか？";
     }
   });
 

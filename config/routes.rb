@@ -12,5 +12,6 @@ Rails.application.routes.draw do
     resources :categories
     root 'dashboard#index'
   end
+  get 'mail_stop', to: 'home#mail_stop'
   root 'home#top'
 end
