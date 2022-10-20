@@ -14,7 +14,7 @@ document.addEventListener('turbolinks:load', function() {
 
   var _bownow_ts = document.createElement('script');
   _bownow_ts.charset = 'utf-8';
-  _bownow_ts.src = 'https://contents.bownow.jp/js/UTC_6755cae0c187ef87e83e/trace.js';
+  _bownow_ts.src = 'https://dev3-contents.bownow.jp/js/UTC_0945ef01f22594920537/trace.js';
   document.getElementsByTagName('head')[0].appendChild(_bownow_ts);
 
   $('.scroll').click(function() {
