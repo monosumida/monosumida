@@ -1,6 +1,11 @@
-<script id="_bownow_cs_sid_e05f7e3cd1d39beeda4b">
-var _bownow_cs_sid_e05f7e3cd1d39beeda4b = document.createElement('script');
-_bownow_cs_sid_e05f7e3cd1d39beeda4b.charset = 'utf-8';
-_bownow_cs_sid_e05f7e3cd1d39beeda4b.src = 'https://dev3-contents.bownow.jp/forms/sid_e05f7e3cd1d39beeda4b/trace.js';
-document.getElementsByTagName('head')[0].appendChild(_bownow_cs_sid_e05f7e3cd1d39beeda4b);
-</script>
+<div class="col-md-12">
+  <div class="card">
+    <div class="card-header card-header-primary">
+      <h4 class="card-title">Edit Blog</h4>
+      <p class="card-category">Edit blog from admin.</p>
+    </div>
+    <div class="card-body">
+      <%= render 'form', blog: Blog.new %>
+    </div>
+  </div>
+</div>
