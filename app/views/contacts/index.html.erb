@@ -1,30 +1,80 @@
-<div class="dogfooding-form">
-  <form action="https://dev3-contents.bownow.jp/forms/handler/sid_281e440e1203a952d8a6" method="POST" accept-charset="UTF-8" >
-    <div>
-      <label for="family_name">姓</label>
-      <input type="text" name="family_name" id="family_name" required>
-    </div>
-    <div>
-      <label for="given_name">名</label>
-      <input type="text" name="given_name" id="given_name" required>
-    </div>
-    <div>
-      <label for="email">Email</label>
-      <input type="email" name="email" id="email" required>
-    </div>
-    <div>
-      <input type="checkbox" id="agreement" name="agreement">
-      <label for="agreement">同意する</label>
-    </div>
-    <div>
-      <input type="submit" value="Send!">
-    </div>
-  </form>
-</div>
-
 <style>
-.dogfooding-form {
-  width: 720px;
-  margin: 60px auto;
+h1{
+	margin:0 auto;
+	font-size: 32px;
+	display: table;
+}
+
+#contact-form {
+    float: left;
+    width: 710px;
+}
+#contact-form dl {
+    border-bottom: 1px dotted #A6C5E4;
+    float: left;
+    line-height: 220%;
+    padding: 10px 0;
+    text-align: left;
+    width: 650px;
+	margin-left:30px;
+	display:inline;
+}
+#contact-form dt {
+    float: left;
+    width: 200px;
+}
+
+    #contact-button {
+    clear: both;
+    float: left;
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+}
+#contact-button button {
+    width: 150px;
 }
 </style>
+<div class="dogfooding-form">
+<form action="https://dev3-contents.bownow.jp/forms/handler/sid_281e440e1203a952d8a6" method="POST" accept-charset="UTF-8" >
+
+<table id="contact-form" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody>
+<tr>
+
+<td>
+<h1>入力フォーム</h1>
+<dl>
+<dt>
+<label for="member_name">担当者名</label></dt>
+<dd> <input type="text" id="member_name" name="name" value="" placeholder="担当者名を入力してください">
+</dd>
+</dl>
+<dl>
+<dt>
+<label for="member_email">メールアドレス</label></dt>
+<dd><input type="email" id="member_email" name="email" value="" placeholder="メールアドレスを入力してください">
+</dd>
+</dl>
+<dl>
+<dt>
+<label for="member_agreement">テキスト入力</label></dt>
+<dd>
+<textarea id="member_text" name="text" rows="4" cols="40" placeholder="テキストを入力してください"></textarea>
+</dd>
+</dl>
+<dl>
+<dt>
+<label for="member_agreement">個人情報の同意</label></dt>
+<dd>
+<input type="checkbox" id="member_agreement" name="kojinjouhou" value="on" />個人情報の取扱規程に同意する
+</dd>
+</dl>
+<p id="contact-button">
+<button type="submit">送信</button>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</form>

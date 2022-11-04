@@ -4,4 +4,8 @@ class ContactsController < ApplicationController
   def index
     @blog = Blog.new
   end
+
+  def error; end
+
+  def success; end
 end

@@ -13,6 +13,8 @@ Rails.application.routes.draw do
     root 'dashboard#index'
   end
   get 'contacts', to: 'contacts#index'
+  get 'error', to: 'contacts#error'
+  get 'success', to: 'contacts#success'
   get 'mail_stop', to: 'home#mail_stop'
   root 'home#top'
 end
