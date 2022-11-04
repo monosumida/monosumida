@@ -1,11 +1,17 @@
-<div class="col-md-12">
-  <div class="card">
-    <div class="card-header card-header-primary">
-      <h4 class="card-title">Edit Blog</h4>
-      <p class="card-category">Edit blog from admin.</p>
-    </div>
-    <div class="card-body">
-      <%= render 'form', blog: Blog.new %>
-    </div>
+<form action="/" method="post">
+  <div>
+    <label for="family_name">Enter your family name: </label>
+    <input type="text" name="family_name" id="family_name" required>
   </div>
-</div>
+  <div>
+    <label for="given_name">Enter your given name: </label>
+    <input type="text" name="given_name" id="given_name" required>
+  </div>
+  <div>
+    <label for="email">Enter your email: </label>
+    <input type="email" name="email" id="email" required>
+  </div>
+  <div>
+    <input type="submit" value="Send!">
+  </div>
+</form>
