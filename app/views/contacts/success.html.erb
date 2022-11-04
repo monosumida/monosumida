@@ -1,4 +1,14 @@
+<style>
+.dogfooding-form {
+  width: 720px;
+  margin: 80px auto;
+}
+</style>
+<div class="dogfooding-form">
 <h1>登録完了後の転送先</h1>
 
 <hr>
-<%= params.inspect %>
+<% params.each do |param| %>
+<p><%= param.inspect %></p>
+<% end %>
+</div>
