@@ -5,6 +5,9 @@ Rails.application.routes.draw do
       get 'preview', as: :preview
     end
   end
+  namespace :api do
+    resources :webhooks, only: %i[create]
+  end
   namespace :admin do
     resources :sessions
     resources :blogs, only: %i[index edit update destroy]
