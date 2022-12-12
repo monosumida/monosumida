@@ -1,5 +1,6 @@
 class Api::WebhooksController < Api::ApplicationController
   def create
+    sleep 35.seconds
     signature = request.headers['BowNow-Signature']
     token = request.headers['BowNow-Request-Token']
     timestamp = request.headers['BowNow-Timestamp']
