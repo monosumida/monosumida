@@ -8,7 +8,7 @@ class Api::WebhooksController < Api::ApplicationController
     Rails.logger.info(request.body)
     Rails.logger.info(request.body.read)
     Rails.logger.info('-----Request Body-----')
-    signed = Digest::SHA256.hexdigest("#{api_key}:#{timestamp}:#{token}:#{request.body.read}")
+    signed = Digest::SHA256.hexdigest("#{api_key}:#{token}:#{timestamp}:#{request.body.read}")
     calced_headers = Base64.urlsafe_encode64(signed)
     render json: {
       result: request.body.read,
