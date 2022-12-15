@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   end
   namespace :api do
     resources :webhooks, only: %i[create]
+    post 'webhooks/timeouts', to: 'webhooks#timeouts'
   end
   namespace :admin do
     resources :sessions
