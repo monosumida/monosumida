@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   namespace :api do
     resources :webhooks, only: %i[create]
     post 'webhooks/timeouts', to: 'webhooks#timeouts'
+    post 'webhooks/unprocessable_entitis', to: 'webhooks#unprocessable_entitis'
+    post 'webhooks/internal_server_errors', to: 'webhooks#internal_server_errors'
   end
   namespace :admin do
     resources :sessions

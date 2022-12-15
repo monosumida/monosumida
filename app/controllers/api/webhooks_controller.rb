@@ -14,6 +14,18 @@ class Api::WebhooksController < Api::ApplicationController
     }, status: :ok
   end
 
+  def unprocessable_entitis
+    render json: {
+      result: 'unprocessable_entity'
+    }, status: :unprocessable_entity
+  end
+
+  def internal_server_errors
+    render json: {
+      result: 'internal_server_error'
+    }, status: :internal_server_error
+  end
+
   def timeouts
     sleep 35.seconds
     render json: {
