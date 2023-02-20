@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     post 'webhooks/timeouts', to: 'webhooks#timeouts'
     post 'webhooks/unprocessable_entitis', to: 'webhooks#unprocessable_entitis'
     post 'webhooks/internal_server_errors', to: 'webhooks#internal_server_errors'
+    post 'webhooks/{test_percent_encode}', to: 'webhooks#test_percent_encode'
   end
   namespace :admin do
     resources :sessions

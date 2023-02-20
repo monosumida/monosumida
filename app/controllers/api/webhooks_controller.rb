@@ -32,4 +32,10 @@ class Api::WebhooksController < Api::ApplicationController
       result: 'ok'
     }, status: :ok
   end
+
+  def test_percent_encode
+    render json: {
+      result: request.body.read
+    }, status: :ok
+  end
 end
